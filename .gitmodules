@@ -1,0 +1,3 @@
+[submodule "vendor/ensime"]
+	path = vendor/ensime
+	url = git://github.com/aemoncannon/ensime.git
