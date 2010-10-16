@@ -24,6 +24,8 @@
 ; note: these are configured in customizations
 (vendor 'color-theme)
 (vendor 'scala-mode)
+(vendor 'ensime)
+(vendor 'org) ;; TODO Fix this so I can call (vendor 'org-mode)
 
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
