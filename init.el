@@ -26,6 +26,7 @@
 (vendor 'scala-mode)
 (vendor 'ensime)
 (vendor 'org) ;; TODO Fix this so I can call (vendor 'org-mode)
+(vendor 'groovy-mode)
 
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
