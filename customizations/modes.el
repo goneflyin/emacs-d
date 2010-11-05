@@ -7,6 +7,11 @@
 ;; scala-mode
 (require 'scala-mode-auto)
 ;; (require 'font-lock) ;; why did stevej have this here??
-;; (require 'ensime)
+(require 'ensime)
 
-(require 'org-mode)
+;; org-mode
+;; (require 'org-mode)
+
+;; groovy-mode
+(require 'groovy-mode)
+(add-to-list 'auto-mode-alist '("\\.gradle$" . groovy-mode))
