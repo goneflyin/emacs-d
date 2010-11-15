@@ -36,7 +36,7 @@
 ;; sounds good - but doesn't work when loading via submodule and repo doesn't have elisp at root
 ;; (vendor 'ensime) 
 (add-to-list 'load-path "~/.emacs.d/vendor/ensime/src/main/elisp/")
-;; (vendor 'org)
+(vendor 'org)
 (vendor 'groovy-mode)
 
 ; load personal customizations (keybindings, colors, etc.)
