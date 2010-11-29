@@ -1,12 +1,21 @@
+;; TODO -- extract this first clause to a function or other file to clean it up
+;; Load cygwin-mount immediately for appropriate behavior upon loading in windows
+;; (if (string-equal system-type "windows-nt")
+;;     (progn (message "Running in windows: initializing cygwin-mount...")
+;;            (load-file "c:/cygwin/home/spfister/emacs-config/lib/misc/cygwin-mount.el")
+;;            (require 'cygwin-mount)
+;;            (cygwin-mount-activate)))
+
+;; setup timer to show config load time
+(message "Loading init.el...")
+(defvar *emacs-load-start* (current-time))
+
 ;; some modes need to call stuff on the exec-path
 (push "/opt/local/bin" exec-path)
 (push "/usr/local/bin" exec-path)
 
 ; enable Common Lisp support
 (require 'cl)
-
-;; setup timer to show config load time
-(defvar *emacs-load-start* (current-time))
 
 ; add directories to the load path
 (add-to-list 'load-path "~/.emacs.d")
@@ -27,7 +36,7 @@
 ;; sounds good - but doesn't work when loading via submodule and repo doesn't have elisp at root
 ;; (vendor 'ensime) 
 (add-to-list 'load-path "~/.emacs.d/vendor/ensime/src/main/elisp/")
-;; (vendor 'org)
+(vendor 'org)
 (vendor 'groovy-mode)
 
 ; load personal customizations (keybindings, colors, etc.)
