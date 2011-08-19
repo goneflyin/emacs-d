@@ -8,6 +8,3 @@
 [submodule "vendor/coffee-mode"]
 	path = vendor/coffee-mode
 	url = git://github.com/defunkt/coffee-mode.git
-[submodule "cucumber.el"]
-	path = cucumber.el
-	url = https://github.com/michaelklishin/cucumber.el.git
