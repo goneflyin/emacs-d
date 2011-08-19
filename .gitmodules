@@ -5,3 +5,6 @@
 	path = vendor/twilight-emacs
 	url = git://github.com/crafterm/twilight-emacs.git
 
+[submodule "vendor/coffee-mode"]
+	path = vendor/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
