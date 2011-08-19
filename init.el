@@ -10,6 +10,23 @@
 (message "Loading init.el...")
 (defvar *emacs-load-start* (current-time))
 
+;; FROM: emacs-starter-kit
+;; Turn off mouse interface early in startup to avoid momentary display
+;; You really don't need these; trust me.
+;; (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+;; (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+;; (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;;
+;; SPACES!!!!!
+;;
+;; This is too important to relegate to any sub-file anywhere.
+;; Set it, love it, and never forget it.
+;;
+(setq-default tab-width 4)
+(setq dotfiles-dir (file-name-directory
+                    (or (buffer-file-name) load-file-name)))
+
 ;; some modes need to call stuff on the exec-path
 (push "/opt/local/bin" exec-path)
 (push "/usr/local/bin" exec-path)
@@ -18,7 +35,7 @@
 (require 'cl)
 
 ; add directories to the load path
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path dotfiles-dir)
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (add-to-list 'load-path "~/.emacs.d/utilities")
 (add-to-list 'load-path "~/.emacs.d/vendor")
