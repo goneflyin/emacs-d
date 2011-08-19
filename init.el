@@ -57,6 +57,7 @@
 (vendor 'groovy-mode)
 (vendor 'coffee-mode)
 (vendor 'feature-mode)
+(vendor 'markdown-mode)
 
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))

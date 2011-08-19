@@ -68,3 +68,6 @@
 
 (add-hook 'coffee-mode-hook
 	  '(lambda() (coffee-custom)))
+
+;; markdown-mode
+(add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
