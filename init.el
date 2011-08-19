@@ -55,6 +55,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/ensime/src/main/elisp/")
 (vendor 'org)
 (vendor 'groovy-mode)
+(vendor 'coffee-mode)
 
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
