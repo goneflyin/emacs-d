@@ -26,6 +26,20 @@
 (require 'show-wspace)
 ;;(add-hook 'font-lock-mode-hook 'show-ws-highlight-tabs)
 
+;; .zsh and .zsh-theme files from oh-my-zsh should appear in shell-script-mode
+(add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
+(add-to-list 'auto-mode-alist '("\\.zsh-theme$" . shell-script-mode))
+
+;; Additional file types for ruby mode: Rakefile, .rake, .ru
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.erb$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
 
 ;; scala-mode
 (require 'scala-mode-auto)
